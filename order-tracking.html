@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Tracking — Gen X Toybox</title>
+  <meta name="description" content="Track your Gen X Toybox order." />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body data-page="tracking">
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/index.html"><span class="brand-icon">🧸</span> Gen X Toybox</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/shop.html">Shop</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/contact.html">Contact</a>
+        <a class="active" href="/order-tracking.html">Track Order</a>
+        <a class="wishlist-link" href="/wishlist.html">Wishlist <span class="badge" id="wishlist-count">0</span></a>
+        <a class="cart-link" href="#" id="cart-button">Cart <span class="badge" id="cart-count">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container tracking">
+    <h1>Order Tracking</h1>
+    <form id="tracking-form" class="stack" novalidate>
+      <label for="orderId">Order Number</label>
+      <input id="orderId" name="orderId" placeholder="e.g., GX-1042" required />
+      <button class="btn btn-primary" type="submit">Track</button>
+      <p id="tracking-help" class="form-help" role="status"></p>
+    </form>
+    <div id="tracking-result" class="tracking-result"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footnote">
+      <small>© <span id="year"></span> Gen X Toybox.</small>
+    </div>
+  </footer>
+
+  <script src="/assets/js/data.js" defer></script>
+  <script src="/assets/js/cart.js" defer></script>
+  <script src="/assets/js/app.js" defer></script>
+</body>
+</html>

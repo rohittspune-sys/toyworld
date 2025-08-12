@@ -1,163 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ToyWorld — Playful Toys for Everyone</title>
-    <meta name="description" content="A modern toy store where you can browse, add to cart, and place a toy order." />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧸</text></svg>">
-
-    <link rel="stylesheet" href="./styles.css" />
-    <script defer src="./app.js"></script>
-  </head>
-  <body>
-    <header class="site-header">
-      <nav class="nav">
-        <a href="#" class="brand" aria-label="ToyWorld home">
-          <span class="brand-accent">Toy</span>World
-        </a>
-        <div class="nav-actions">
-          <label class="search">
-            <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            <input id="searchInput" type="search" placeholder="Search toys..." aria-label="Search toys" />
-          </label>
-          <button id="cartButton" class="icon-btn" aria-label="Open cart" aria-haspopup="dialog" aria-controls="cartDrawer">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 12.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-            <span id="cartBadge" class="badge" aria-hidden="true">0</span>
-          </button>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gen X Toybox — Where Nostalgia Meets Playtime</title>
+  <meta name="description" content="Gen X Toybox: retro toys, educational toys, and collectibles. Curated selection for parents, children, and collectors. Fast delivery, trusted brands, secure payments." />
+  <meta name="keywords" content="retro toys, educational toys, Gen X collectibles, modern learning toys, toy store online" />
+  <meta property="og:title" content="Gen X Toybox — Where Nostalgia Meets Playtime" />
+  <meta property="og:description" content="Curated retro and educational toys for families and collectors." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1546776310-eef45dd6ec2e?w=1200&q=80&auto=format&fit=crop" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🧸</text></svg>">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "Gen X Toybox",
+    "url": "https://example.com",
+    "logo": "https://example.com/logo.png",
+    "sameAs": [
+      "https://www.facebook.com/",
+      "https://www.instagram.com/"
+    ],
+    "description": "Curated mix of retro classics and modern educational toys.",
+    "currenciesAccepted": "USD",
+    "paymentAccepted": ["Credit Card", "PayPal"],
+    "priceRange": "$$"
+  }
+  </script>
+</head>
+<body data-page="home">
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/index.html"><span class="brand-icon">🧸</span> Gen X Toybox</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/shop.html">Shop</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/order-tracking.html">Track Order</a>
+        <a class="wishlist-link" href="/wishlist.html">Wishlist <span class="badge" id="wishlist-count">0</span></a>
+        <a class="cart-link" href="#" id="cart-button">Cart <span class="badge" id="cart-count">0</span></a>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <section class="hero" aria-labelledby="heroTitle">
-        <div class="hero-content">
-          <h1 id="heroTitle">Delightful toys for bright imaginations</h1>
-          <p>Discover cuddly plushies, creative kits, and classic playtime favorites. Safe, colorful, and ready for fun.</p>
-          <div class="hero-cta">
-            <a href="#products" class="btn btn-primary">Shop the collection</a>
-            <a href="#categories" class="btn btn-ghost">Browse categories</a>
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <div class="hero-copy">
+          <h1>Where Nostalgia Meets Playtime</h1>
+          <p>Discover a curated mix of retro classics and modern educational toys — for parents, children, and collectors.</p>
+          <div class="hero-ctas">
+            <a href="/shop.html" class="btn btn-primary">Shop Now</a>
+            <a href="#collections" class="btn btn-ghost">Browse Collections</a>
           </div>
         </div>
-        <div class="hero-visual" aria-hidden="true">
-          <div class="blob"></div>
-          <div class="toy-card">
-            <span class="toy-emoji" role="img" aria-label="Teddy">🧸</span>
-            <span class="toy-emoji" role="img" aria-label="Toy Car">🚗</span>
-            <span class="toy-emoji" role="img" aria-label="Blocks">🧩</span>
-          </div>
+        <div class="hero-media">
+          <img src="https://images.unsplash.com/photo-1546776310-eef45dd6ec2e?w=1000&q=80&auto=format&fit=crop" alt="Retro robot and modern educational blocks" />
         </div>
-      </section>
-
-      <section class="categories" id="categories" aria-labelledby="categoryTitle">
-        <div class="section-head">
-          <h2 id="categoryTitle">Shop by category</h2>
-        </div>
-        <div id="categoryChips" class="chip-row" role="tablist" aria-label="Product categories"></div>
-      </section>
-
-      <section class="products" id="products" aria-labelledby="productTitle">
-        <div class="section-head">
-          <h2 id="productTitle">Featured toys</h2>
-          <div class="sort">
-            <label>
-              <span class="label">Sort</span>
-              <select id="sortSelect" aria-label="Sort products">
-                <option value="featured">Featured</option>
-                <option value="priceAsc">Price: Low to High</option>
-                <option value="priceDesc">Price: High to Low</option>
-                <option value="nameAsc">Name: A to Z</option>
-              </select>
-            </label>
-          </div>
-        </div>
-        <div id="productGrid" class="grid" aria-live="polite"></div>
-      </section>
-    </main>
-
-    <div id="toast" class="toast" role="status" aria-live="polite"></div>
-
-    <div id="cartOverlay" class="overlay" hidden></div>
-    <aside id="cartDrawer" class="cart" role="dialog" aria-modal="true" aria-labelledby="cartTitle" hidden>
-      <header class="cart-head">
-        <h3 id="cartTitle">Your cart</h3>
-        <button id="closeCart" class="icon-btn" aria-label="Close cart">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-        </button>
-      </header>
-      <div id="cartItems" class="cart-items" aria-live="polite"></div>
-      <footer class="cart-foot">
-        <div class="row">
-          <span>Subtotal</span>
-          <strong id="cartSubtotal">$0.00</strong>
-        </div>
-        <button id="checkoutBtn" class="btn btn-primary btn-block">Checkout</button>
-      </footer>
-    </aside>
-
-    <div id="checkoutOverlay" class="overlay" hidden></div>
-    <section id="checkoutModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle" hidden>
-      <header class="modal-head">
-        <h3 id="checkoutTitle">Checkout</h3>
-        <button id="closeCheckout" class="icon-btn" aria-label="Close checkout">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-        </button>
-      </header>
-      <form id="checkoutForm" class="form">
-        <div class="form-row">
-          <label>
-            <span class="label">Full name</span>
-            <input name="name" type="text" required placeholder="Alex Johnson" />
-          </label>
-          <label>
-            <span class="label">Email</span>
-            <input name="email" type="email" required placeholder="alex@email.com" />
-          </label>
-        </div>
-        <label>
-          <span class="label">Address</span>
-          <input name="address" type="text" required placeholder="123 Fun St" />
-        </label>
-        <div class="form-row">
-          <label>
-            <span class="label">City</span>
-            <input name="city" type="text" required placeholder="Playtown" />
-          </label>
-          <label>
-            <span class="label">ZIP</span>
-            <input name="zip" type="text" required inputmode="numeric" pattern="[0-9]{4,10}" placeholder="00000" />
-          </label>
-        </div>
-        <label>
-          <span class="label">Card number</span>
-          <input name="card" type="text" required inputmode="numeric" autocomplete="off" placeholder="4242 4242 4242 4242" />
-        </label>
-        <button class="btn btn-primary btn-block" type="submit">Place order</button>
-        <p class="form-help">This demo does not process real payments.</p>
-      </form>
+      </div>
+      <div class="hero-stripes" aria-hidden="true"></div>
     </section>
 
-    <template id="cartItemTemplate">
-      <div class="cart-item">
-        <img class="thumb" alt="" />
-        <div class="meta">
-          <div class="name"></div>
-          <div class="price"></div>
-          <div class="qty">
-            <button class="qty-btn" data-action="decrement" aria-label="Decrease quantity">−</button>
-            <input class="qty-input" type="number" min="1" value="1" aria-label="Quantity" />
-            <button class="qty-btn" data-action="increment" aria-label="Increase quantity">+</button>
-          </div>
-        </div>
-        <button class="icon-btn remove" aria-label="Remove item">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
-        </button>
+    <section class="about container">
+      <div class="section-header">
+        <h2>About Us</h2>
+        <p>At Gen X Toybox, we believe in play with purpose. Our mission is to bring together the magic of nostalgia with the power of learning — toys that spark creativity, build skills, and inspire joy.</p>
       </div>
-    </template>
-  </body>
+    </section>
+
+    <section id="collections" class="featured container">
+      <div class="section-header with-actions">
+        <h2>Featured Collections</h2>
+        <div class="carousel-actions">
+          <button class="carousel-prev" aria-label="Previous">‹</button>
+          <button class="carousel-next" aria-label="Next">›</button>
+        </div>
+      </div>
+      <div class="carousel" id="collections-carousel">
+        <!-- Slides injected by JS -->
+      </div>
+    </section>
+
+    <section class="why container">
+      <div class="section-header">
+        <h2>Why Choose Us</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-item">
+          <div class="why-icon">🎯</div>
+          <h3>Curated Selection</h3>
+          <p>Handpicked toys that balance fun, nostalgia, and learning.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">🏆</div>
+          <h3>Trusted Brands</h3>
+          <p>Quality you can feel good about, from makers you trust.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">🚚</div>
+          <h3>Fast Delivery</h3>
+          <p>Speedy shipping so the fun starts sooner.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">🔒</div>
+          <h3>Secure Payments</h3>
+          <p>Pay with confidence via Stripe or PayPal.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials container">
+      <div class="section-header">
+        <h2>What Customers Say</h2>
+      </div>
+      <div class="testimonials-grid" id="testimonials">
+        <!-- Testimonials injected by JS -->
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <div class="container newsletter-inner">
+        <div>
+          <h2>Stay in the Loop</h2>
+          <p>Get updates on new arrivals, deals, and gift ideas.</p>
+        </div>
+        <form id="newsletter-form" class="newsletter-form" novalidate>
+          <input type="email" id="newsletter-email" name="email" placeholder="Your email" aria-label="Email address" required />
+          <button type="submit" class="btn btn-primary">Sign Up</button>
+          <p class="form-help" id="newsletter-help" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="/index.html"><span class="brand-icon">🧸</span> Gen X Toybox</a>
+        <p class="muted">Playful, educational, and collectible — for every generation.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="/shop.html">Shop</a>
+        <a href="/wishlist.html">Wishlist</a>
+        <a href="/order-tracking.html">Order Tracking</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/admin.html">Admin</a>
+      </nav>
+      <div>
+        <p class="muted">Payments</p>
+        <div class="pay-logos" aria-label="Payment options">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Stripe_Logo%2C_revised_2016.svg" alt="Stripe" />
+        </div>
+      </div>
+    </div>
+    <div class="container footnote">
+      <small>© <span id="year"></span> Gen X Toybox. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="/assets/js/data.js" defer></script>
+  <script src="/assets/js/cart.js" defer></script>
+  <script src="/assets/js/app.js" defer></script>
+</body>
 </html>

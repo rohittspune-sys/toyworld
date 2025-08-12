@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard — Gen X Toybox</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+</head>
+<body data-page="admin">
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/index.html"><span class="brand-icon">🧸</span> Gen X Toybox</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/shop.html">Shop</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/order-tracking.html">Track Order</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container admin">
+    <h1>Admin Dashboard</h1>
+    <div class="admin-grid">
+      <section>
+        <h2>Inventory</h2>
+        <div id="inventory-table" class="table"></div>
+      </section>
+      <section>
+        <h2>Orders</h2>
+        <div id="orders-table" class="table"></div>
+      </section>
+      <section>
+        <h2>Create Promotion</h2>
+        <form id="promo-form" class="stack" novalidate>
+          <label for="promo-name">Name</label>
+          <input id="promo-name" required />
+          <label for="promo-discount">Discount %</label>
+          <input id="promo-discount" type="number" min="0" max="90" required />
+          <button class="btn btn-primary" type="submit">Save Promotion</button>
+          <p class="form-help" id="promo-help" role="status"></p>
+        </form>
+      </section>
+      <section>
+        <h2>Sales Analytics</h2>
+        <canvas id="sales-chart" height="200"></canvas>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footnote">
+      <small>© <span id="year"></span> Gen X Toybox.</small>
+    </div>
+  </footer>
+
+  <script src="/assets/js/data.js" defer></script>
+  <script src="/assets/js/app.js" defer></script>
+</body>
+</html>

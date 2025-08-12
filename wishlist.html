@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wishlist — Gen X Toybox</title>
+  <meta name="description" content="Your saved items at Gen X Toybox." />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body data-page="wishlist">
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/index.html"><span class="brand-icon">🧸</span> Gen X Toybox</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/shop.html">Shop</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/order-tracking.html">Track Order</a>
+        <a class="active wishlist-link" href="/wishlist.html">Wishlist <span class="badge" id="wishlist-count">0</span></a>
+        <a class="cart-link" href="#" id="cart-button">Cart <span class="badge" id="cart-count">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container wishlist-page">
+    <h1>Wishlist</h1>
+    <div id="wishlist-grid" class="products"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footnote">
+      <small>© <span id="year"></span> Gen X Toybox.</small>
+    </div>
+  </footer>
+
+  <script src="/assets/js/data.js" defer></script>
+  <script src="/assets/js/cart.js" defer></script>
+  <script src="/assets/js/app.js" defer></script>
+</body>
+</html>

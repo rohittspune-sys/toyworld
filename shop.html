@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop — Gen X Toybox</title>
+  <meta name="description" content="Browse retro classics and modern educational toys. Filter by age, type, brand, price, and educational focus." />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body data-page="shop">
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/index.html"><span class="brand-icon">🧸</span> Gen X Toybox</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="nav-links" aria-label="Primary">
+        <a class="active" href="/shop.html">Shop</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/order-tracking.html">Track Order</a>
+        <a class="wishlist-link" href="/wishlist.html">Wishlist <span class="badge" id="wishlist-count">0</span></a>
+        <a class="cart-link" href="#" id="cart-button">Cart <span class="badge" id="cart-count">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container shop">
+    <h1>Shop</h1>
+    <div class="shop-layout">
+      <aside class="filters" aria-label="Filters">
+        <h2>Filters</h2>
+        <div class="filter-group">
+          <label for="search">Search</label>
+          <input id="search" type="search" placeholder="Search toys" />
+        </div>
+        <div class="filter-group">
+          <label for="age">Age</label>
+          <select id="age">
+            <option value="">Any</option>
+            <option value="0-3">0–3</option>
+            <option value="4-6">4–6</option>
+            <option value="7-9">7–9</option>
+            <option value="10-14">10–14</option>
+            <option value="15+">15+</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="type">Type</label>
+          <select id="type">
+            <option value="">Any</option>
+            <option>Retro Classics</option>
+            <option>Modern Learning</option>
+            <option>For Collectors</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="brand">Brand</label>
+          <select id="brand">
+            <option value="">All</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="focus">Educational Focus</label>
+          <select id="focus">
+            <option value="">Any</option>
+            <option>STEM</option>
+            <option>Creativity</option>
+            <option>Problem Solving</option>
+            <option>Fine Motor</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="price">Max Price ($)</label>
+          <input id="price" type="number" min="0" step="1" placeholder="No limit" />
+        </div>
+        <div class="filter-actions">
+          <button id="apply-filters" class="btn btn-primary">Apply</button>
+          <button id="clear-filters" class="btn btn-ghost">Clear</button>
+        </div>
+      </aside>
+      <section class="products" id="product-grid" aria-live="polite">
+        <!-- Product cards injected by JS -->
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footnote">
+      <small>© <span id="year"></span> Gen X Toybox.</small>
+    </div>
+  </footer>
+
+  <script src="/assets/js/data.js" defer></script>
+  <script src="/assets/js/cart.js" defer></script>
+  <script src="/assets/js/app.js" defer></script>
+</body>
+</html>
