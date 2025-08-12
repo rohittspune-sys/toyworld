@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — Gen X Toybox</title>
+  <meta name="description" content="Contact Gen X Toybox via email, chat support, or contact form." />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body data-page="contact">
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/index.html"><span class="brand-icon">🧸</span> Gen X Toybox</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/shop.html">Shop</a>
+        <a href="/blog.html">Blog</a>
+        <a class="active" href="/contact.html">Contact</a>
+        <a href="/order-tracking.html">Track Order</a>
+        <a class="wishlist-link" href="/wishlist.html">Wishlist <span class="badge" id="wishlist-count">0</span></a>
+        <a class="cart-link" href="#" id="cart-button">Cart <span class="badge" id="cart-count">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container contact">
+    <h1>Contact Us</h1>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h2>Email</h2>
+        <p><a href="mailto:support@genxtoybox.com">support@genxtoybox.com</a></p>
+      </div>
+      <div class="contact-card">
+        <h2>Chat Support</h2>
+        <p>Live chat is available Mon–Fri, 9am–6pm ET.</p>
+        <button class="btn btn-primary" disabled aria-disabled="true">Open Chat (Coming Soon)</button>
+      </div>
+      <div class="contact-card">
+        <h2>Send a Message</h2>
+        <form id="contact-form" class="stack" novalidate>
+          <label for="name">Name</label>
+          <input id="name" name="name" required />
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email" required />
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <button type="submit" class="btn btn-primary">Send</button>
+          <p id="contact-help" class="form-help" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footnote">
+      <small>© <span id="year"></span> Gen X Toybox.</small>
+    </div>
+  </footer>
+
+  <script src="/assets/js/data.js" defer></script>
+  <script src="/assets/js/cart.js" defer></script>
+  <script src="/assets/js/app.js" defer></script>
+</body>
+</html>
